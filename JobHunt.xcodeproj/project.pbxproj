@@ -13,6 +13,9 @@
 		AE8595532BC475EA007D6187 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = AE8595522BC475EA007D6187 /* Base */; };
 		AE8595552BC475EB007D6187 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AE8595542BC475EB007D6187 /* Assets.xcassets */; };
 		AE8595582BC475EB007D6187 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = AE8595572BC475EB007D6187 /* Base */; };
+		AEFD02402BCB3A5900C70589 /* JobTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AEFD023F2BCB3A5900C70589 /* JobTableViewCell.xib */; };
+		AEFD02422BCB3A7D00C70589 /* JobTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEFD02412BCB3A7D00C70589 /* JobTableViewCell.swift */; };
+		AEFD02442BCB3FBC00C70589 /* JobViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEFD02432BCB3FBC00C70589 /* JobViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +27,9 @@
 		AE8595542BC475EB007D6187 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AE8595572BC475EB007D6187 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AE8595592BC475EB007D6187 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AEFD023F2BCB3A5900C70589 /* JobTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = JobTableViewCell.xib; sourceTree = "<group>"; };
+		AEFD02412BCB3A7D00C70589 /* JobTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobTableViewCell.swift; sourceTree = "<group>"; };
+		AEFD02432BCB3FBC00C70589 /* JobViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,8 +62,10 @@
 		AE85954A2BC475EA007D6187 /* JobHunt */ = {
 			isa = PBXGroup;
 			children = (
+				AEFD023E2BCB3A1D00C70589 /* JobCell */,
 				AE85954B2BC475EA007D6187 /* AppDelegate.swift */,
 				AE85954D2BC475EA007D6187 /* SceneDelegate.swift */,
+				AEFD02432BCB3FBC00C70589 /* JobViewModel.swift */,
 				AE85954F2BC475EA007D6187 /* ViewController.swift */,
 				AE8595512BC475EA007D6187 /* Main.storyboard */,
 				AE8595542BC475EB007D6187 /* Assets.xcassets */,
@@ -65,6 +73,15 @@
 				AE8595592BC475EB007D6187 /* Info.plist */,
 			);
 			path = JobHunt;
+			sourceTree = "<group>";
+		};
+		AEFD023E2BCB3A1D00C70589 /* JobCell */ = {
+			isa = PBXGroup;
+			children = (
+				AEFD02412BCB3A7D00C70589 /* JobTableViewCell.swift */,
+				AEFD023F2BCB3A5900C70589 /* JobTableViewCell.xib */,
+			);
+			path = JobCell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -128,6 +145,7 @@
 				AE8595552BC475EB007D6187 /* Assets.xcassets in Resources */,
 				AE8595582BC475EB007D6187 /* Base in Resources */,
 				AE8595532BC475EA007D6187 /* Base in Resources */,
+				AEFD02402BCB3A5900C70589 /* JobTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -141,6 +159,8 @@
 				AE8595502BC475EA007D6187 /* ViewController.swift in Sources */,
 				AE85954C2BC475EA007D6187 /* AppDelegate.swift in Sources */,
 				AE85954E2BC475EA007D6187 /* SceneDelegate.swift in Sources */,
+				AEFD02422BCB3A7D00C70589 /* JobTableViewCell.swift in Sources */,
+				AEFD02442BCB3FBC00C70589 /* JobViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
