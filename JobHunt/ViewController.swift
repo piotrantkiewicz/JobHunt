@@ -8,6 +8,8 @@ class ViewController: UIViewController {
     let jobCategories = ["Active", "Ejected"]
     var activeJobs: [JobViewModel] = []
     
+    var loader = JobsLoader()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         activeJobs = provideJobs()
@@ -30,37 +32,7 @@ class ViewController: UIViewController {
     }
     
     func provideJobs() -> [JobViewModel] {
-        var activeJobs: [JobViewModel] = []
-        let activeCategory = "Debit"
-        
-        activeJobs.append(
-            JobViewModel(
-                position: "UX Research",
-                company: "Google LLC",
-                imageName: "googleLogo",
-                category: activeCategory
-            )
-        )
-        
-        activeJobs.append(
-            JobViewModel(
-                position: "Interaction Designer",
-                company: "Microsoft Corporation",
-                imageName: "microsoftLogo",
-                category: activeCategory
-            )
-        )
-        
-        activeJobs.append(
-            JobViewModel(
-                position: "Product Designer",
-                company: "Adobe Inc.",
-                imageName: "adobeLogo",
-                category: activeCategory
-            )
-        )
-        
-        return activeJobs
+        return loader.load()
     }
 }
 

@@ -1,0 +1,32 @@
+[
+    {
+        "position": "UX Research",
+        "company": "Google LLC",
+        "imageName": "googleLogo",
+        "category": "activeCategory"
+    },
+    {
+        "position": "Interaction Designer",
+        "company": "Microsoft Corporation",
+        "imageName": "microsoftLogo",
+        "category": "activeCategory"
+    },
+    {
+        "position": "Product Designer",
+        "company": "Adobe Inc.",
+        "imageName": "adobeLogo",
+        "category": "activeCategory"
+    },
+    {
+        "position": "Design Manager",
+        "company": "ATesla, Inc.",
+        "imageName": "teslaLogo",
+        "category": "activeCategory"
+    },
+    {
+        "position": "Product Designer",
+        "company": "Salesforce.com, Inc.",
+        "imageName": "salesforceLogo",
+        "category": "activeCategory"
+    }
+]

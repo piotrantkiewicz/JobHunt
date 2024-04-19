@@ -1,6 +1,6 @@
 import Foundation
 
-struct JobViewModel {
+struct JobViewModel: Codable {
     let position: String
     let company: String
     let imageName: String

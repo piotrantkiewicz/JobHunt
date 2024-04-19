@@ -26,8 +26,7 @@ class JobTableViewCell: UITableViewCell {
         self.layer.rasterizationScale = UIScreen.main.scale
         
         self.layer.cornerRadius = 16
+        
+        
     }
-    
-    override func awakeFromNib() {}
-    
 }
