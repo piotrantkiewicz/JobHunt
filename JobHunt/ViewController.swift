@@ -5,24 +5,42 @@ class ViewController: UIViewController {
     @IBOutlet weak var segmentedControl: UISegmentedControl!
     @IBOutlet weak var tableView: UITableView!
     
-    let jobCategories = ["Active", "Ejected"]
-    var activeJobs: [JobViewModel] = []
+    private var categories: [JobCategoryViewModel] = []
+    private var currentCategoryIndex: Int = 0
     
-    var loader = JobsLoader()
+    private var currentCategory: JobCategoryViewModel {
+        categories[currentCategoryIndex]
+    }
+    
+    private var loader = JobsLoader()
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        activeJobs = provideJobs()
+        categories = provideCategories()
         configureTableView()
         configureSegmentedControl()
     }
     
     func configureSegmentedControl() {
         segmentedControl.removeAllSegments()
-        for (index, category) in jobCategories.enumerated() {
-            segmentedControl.insertSegment(withTitle: category, at: index, animated: false)
+        for (index, category) in categories.enumerated() {
+            segmentedControl.insertSegment(
+                withTitle: category.title,
+                at: index,
+                animated: false
+            )
         }
         segmentedControl.selectedSegmentIndex = 0
+        
+        segmentedControl.addTarget(self, action: #selector(onSegmentControlIndexChanged), for: .valueChanged)
+    }
+    
+    @objc
+    private func onSegmentControlIndexChanged() {
+        currentCategoryIndex = segmentedControl.selectedSegmentIndex
+        tableView.reloadData()
     }
     
     func configureTableView() {
@@ -31,24 +49,37 @@ class ViewController: UIViewController {
         tableView.register(UINib(nibName: "JobTableViewCell", bundle: nil), forCellReuseIdentifier: "JobTableViewCell")
     }
     
-    func provideJobs() -> [JobViewModel] {
-        return loader.load()
+    private func provideCategories() -> [JobCategoryViewModel] {
+        let jobs = loader.load()
+        
+        let jobCategories: [String] = ["Active", "Ejected"]
+        
+        var categories: [String: [JobViewModel]] = [:]
+        
+        for category in jobCategories {
+            categories[category] = []
+        }
+        
+        for job in jobs {
+            categories[job.categoryTitle]?.append(job)
+        }
+        
+        return jobCategories.compactMap {
+            guard let jobs = categories[$0] else { return nil }
+            return JobCategoryViewModel(title: $0, jobs: jobs)
+        }
     }
 }
 
 extension ViewController: UITableViewDataSource, UITableViewDelegate {
-    func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
-    }
+    func numberOfSections(in tableView: UITableView) -> Int { 1 }
     
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return activeJobs.count
-    }
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int { return currentCategory.jobs.count }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if let cell = tableView.dequeueReusableCell(withIdentifier: "JobTableViewCell", for: indexPath) as? JobTableViewCell {
             
-            let job = activeJobs[indexPath.row]
+            let job = currentCategory.jobs[indexPath.row]
             
             cell.configure(viewModel: job)
             

@@ -13,3 +13,10 @@ struct JobViewModel: Codable {
         self.category = category
     }
 }
+
+extension JobViewModel {
+    
+    var categoryTitle: String {
+        category.capitalized
+    }
+}
