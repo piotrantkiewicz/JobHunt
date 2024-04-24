@@ -10,6 +10,10 @@
 		AE5FE7EC2BD7B643007EFE3A /* JobCategoryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE5FE7EB2BD7B643007EFE3A /* JobCategoryViewModel.swift */; };
 		AE6283302BD1A21600C2F91E /* jobs.json in Resources */ = {isa = PBXBuildFile; fileRef = AE62832F2BD1A21600C2F91E /* jobs.json */; };
 		AE6283322BD27ACD00C2F91E /* JobsLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE6283312BD27ACD00C2F91E /* JobsLoader.swift */; };
+		AE6861282BD9920500211B94 /* CorneredView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE6861272BD9920500211B94 /* CorneredView.swift */; };
+		AE68612D2BD9A3B400211B94 /* JobDetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE68612C2BD9A3B400211B94 /* JobDetailsVC.swift */; };
+		AE7AA8762BD9A97A003801B3 /* Urbanist-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AE7AA8702BD9A97A003801B3 /* Urbanist-Bold.ttf */; };
+		AE7AA8792BD9A97A003801B3 /* Urbanist-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AE7AA8732BD9A97A003801B3 /* Urbanist-Regular.ttf */; };
 		AE85954C2BC475EA007D6187 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE85954B2BC475EA007D6187 /* AppDelegate.swift */; };
 		AE85954E2BC475EA007D6187 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE85954D2BC475EA007D6187 /* SceneDelegate.swift */; };
 		AE8595502BC475EA007D6187 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE85954F2BC475EA007D6187 /* ViewController.swift */; };
@@ -25,6 +29,10 @@
 		AE5FE7EB2BD7B643007EFE3A /* JobCategoryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobCategoryViewModel.swift; sourceTree = "<group>"; };
 		AE62832F2BD1A21600C2F91E /* jobs.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = jobs.json; sourceTree = "<group>"; };
 		AE6283312BD27ACD00C2F91E /* JobsLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobsLoader.swift; sourceTree = "<group>"; };
+		AE6861272BD9920500211B94 /* CorneredView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CorneredView.swift; sourceTree = "<group>"; };
+		AE68612C2BD9A3B400211B94 /* JobDetailsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobDetailsVC.swift; sourceTree = "<group>"; };
+		AE7AA8702BD9A97A003801B3 /* Urbanist-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Urbanist-Bold.ttf"; sourceTree = "<group>"; };
+		AE7AA8732BD9A97A003801B3 /* Urbanist-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Urbanist-Regular.ttf"; sourceTree = "<group>"; };
 		AE8595482BC475EA007D6187 /* JobHunt.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JobHunt.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AE85954B2BC475EA007D6187 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AE85954D2BC475EA007D6187 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -58,6 +66,24 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		AE6861292BD995BD00211B94 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				AE68612A2BD995DF00211B94 /* Fonts */,
+				AE8595542BC475EB007D6187 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		AE68612A2BD995DF00211B94 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				AE7AA8702BD9A97A003801B3 /* Urbanist-Bold.ttf */,
+				AE7AA8732BD9A97A003801B3 /* Urbanist-Regular.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
 		AE85953F2BC475EA007D6187 = {
 			isa = PBXGroup;
 			children = (
@@ -77,17 +103,19 @@
 		AE85954A2BC475EA007D6187 /* JobHunt */ = {
 			isa = PBXGroup;
 			children = (
+				AE6861292BD995BD00211B94 /* Resources */,
 				AE5FE7ED2BD7B654007EFE3A /* Model */,
 				AE62832F2BD1A21600C2F91E /* jobs.json */,
 				AEFD023E2BCB3A1D00C70589 /* JobCell */,
 				AE85954B2BC475EA007D6187 /* AppDelegate.swift */,
 				AE85954D2BC475EA007D6187 /* SceneDelegate.swift */,
 				AE85954F2BC475EA007D6187 /* ViewController.swift */,
+				AE68612C2BD9A3B400211B94 /* JobDetailsVC.swift */,
 				AE8595512BC475EA007D6187 /* Main.storyboard */,
-				AE8595542BC475EB007D6187 /* Assets.xcassets */,
+				AE6861272BD9920500211B94 /* CorneredView.swift */,
 				AE8595562BC475EB007D6187 /* LaunchScreen.storyboard */,
-				AE8595592BC475EB007D6187 /* Info.plist */,
 				AE6283312BD27ACD00C2F91E /* JobsLoader.swift */,
+				AE8595592BC475EB007D6187 /* Info.plist */,
 			);
 			path = JobHunt;
 			sourceTree = "<group>";
@@ -162,8 +190,10 @@
 				AE8595552BC475EB007D6187 /* Assets.xcassets in Resources */,
 				AE8595582BC475EB007D6187 /* Base in Resources */,
 				AE8595532BC475EA007D6187 /* Base in Resources */,
+				AE7AA8762BD9A97A003801B3 /* Urbanist-Bold.ttf in Resources */,
 				AEFD02402BCB3A5900C70589 /* JobTableViewCell.xib in Resources */,
 				AE6283302BD1A21600C2F91E /* jobs.json in Resources */,
+				AE7AA8792BD9A97A003801B3 /* Urbanist-Regular.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -176,7 +206,9 @@
 			files = (
 				AE8595502BC475EA007D6187 /* ViewController.swift in Sources */,
 				AE85954C2BC475EA007D6187 /* AppDelegate.swift in Sources */,
+				AE6861282BD9920500211B94 /* CorneredView.swift in Sources */,
 				AE85954E2BC475EA007D6187 /* SceneDelegate.swift in Sources */,
+				AE68612D2BD9A3B400211B94 /* JobDetailsVC.swift in Sources */,
 				AEFD02422BCB3A7D00C70589 /* JobTableViewCell.swift in Sources */,
 				AE6283322BD27ACD00C2F91E /* JobsLoader.swift in Sources */,
 				AEFD02442BCB3FBC00C70589 /* JobViewModel.swift in Sources */,
