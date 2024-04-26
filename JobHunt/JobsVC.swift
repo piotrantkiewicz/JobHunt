@@ -1,6 +1,6 @@
 import UIKit
 
-class ViewController: UIViewController {
+class JobsVC: UIViewController {
     
     @IBOutlet weak var segmentedControl: UISegmentedControl!
     @IBOutlet weak var tableView: UITableView!
@@ -71,7 +71,7 @@ class ViewController: UIViewController {
     }
 }
 
-extension ViewController: UITableViewDataSource, UITableViewDelegate {
+extension JobsVC: UITableViewDataSource {
     func numberOfSections(in tableView: UITableView) -> Int { 1 }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int { return currentCategory.jobs.count }
@@ -87,5 +87,18 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
         }
         
         return UITableViewCell()
+    }
+}
+
+extension JobsVC: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        presentDetails()
+    }
+    
+    private func presentDetails() {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let detailsVC = storyboard.instantiateViewController(withIdentifier: "JobDetailsVC")
+        
+        show(detailsVC, sender: self)
     }
 }

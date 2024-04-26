@@ -8,6 +8,16 @@ class JobTableViewCell: UITableViewCell {
     
     required init?(coder: NSCoder) {
         super.init(coder: coder)
+        commonInit()
+    }
+    
+    override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
+        super.init(style: style, reuseIdentifier: reuseIdentifier)
+        commonInit()
+    }
+    
+    private func commonInit() {
+        selectionStyle = .none
     }
     
     func configure(
@@ -26,7 +36,5 @@ class JobTableViewCell: UITableViewCell {
         self.layer.rasterizationScale = UIScreen.main.scale
         
         self.layer.cornerRadius = 16
-        
-        
     }
 }
