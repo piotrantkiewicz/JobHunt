@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		AE5FE7EC2BD7B643007EFE3A /* JobCategoryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE5FE7EB2BD7B643007EFE3A /* JobCategoryViewModel.swift */; };
-		AE6283302BD1A21600C2F91E /* jobs.json in Resources */ = {isa = PBXBuildFile; fileRef = AE62832F2BD1A21600C2F91E /* jobs.json */; };
 		AE6283322BD27ACD00C2F91E /* JobsLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE6283312BD27ACD00C2F91E /* JobsLoader.swift */; };
 		AE6861282BD9920500211B94 /* CorneredView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE6861272BD9920500211B94 /* CorneredView.swift */; };
 		AE68612D2BD9A3B400211B94 /* JobDetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE68612C2BD9A3B400211B94 /* JobDetailsVC.swift */; };
@@ -20,6 +19,10 @@
 		AE8595532BC475EA007D6187 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = AE8595522BC475EA007D6187 /* Base */; };
 		AE8595552BC475EB007D6187 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AE8595542BC475EB007D6187 /* Assets.xcassets */; };
 		AE8595582BC475EB007D6187 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = AE8595572BC475EB007D6187 /* Base */; };
+		AEB669E92BE7E71100205067 /* JobsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEB669E82BE7E71100205067 /* JobsViewModel.swift */; };
+		AEB669EF2BE7EDBD00205067 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = AEB669EE2BE7EDBD00205067 /* Alamofire */; };
+		AEC9D3EA2BE8DC4A009BED3D /* JobsRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEC9D3E92BE8DC4A009BED3D /* JobsRepository.swift */; };
+		AEC9D3ED2BE8E423009BED3D /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = AEC9D3EC2BE8E423009BED3D /* SDWebImage */; };
 		AEFD02402BCB3A5900C70589 /* JobTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AEFD023F2BCB3A5900C70589 /* JobTableViewCell.xib */; };
 		AEFD02422BCB3A7D00C70589 /* JobTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEFD02412BCB3A7D00C70589 /* JobTableViewCell.swift */; };
 		AEFD02442BCB3FBC00C70589 /* JobViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEFD02432BCB3FBC00C70589 /* JobViewModel.swift */; };
@@ -27,7 +30,6 @@
 
 /* Begin PBXFileReference section */
 		AE5FE7EB2BD7B643007EFE3A /* JobCategoryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobCategoryViewModel.swift; sourceTree = "<group>"; };
-		AE62832F2BD1A21600C2F91E /* jobs.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = jobs.json; sourceTree = "<group>"; };
 		AE6283312BD27ACD00C2F91E /* JobsLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobsLoader.swift; sourceTree = "<group>"; };
 		AE6861272BD9920500211B94 /* CorneredView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CorneredView.swift; sourceTree = "<group>"; };
 		AE68612C2BD9A3B400211B94 /* JobDetailsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobDetailsVC.swift; sourceTree = "<group>"; };
@@ -41,6 +43,8 @@
 		AE8595542BC475EB007D6187 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AE8595572BC475EB007D6187 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AE8595592BC475EB007D6187 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AEB669E82BE7E71100205067 /* JobsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobsViewModel.swift; sourceTree = "<group>"; };
+		AEC9D3E92BE8DC4A009BED3D /* JobsRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobsRepository.swift; sourceTree = "<group>"; };
 		AEFD023F2BCB3A5900C70589 /* JobTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = JobTableViewCell.xib; sourceTree = "<group>"; };
 		AEFD02412BCB3A7D00C70589 /* JobTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobTableViewCell.swift; sourceTree = "<group>"; };
 		AEFD02432BCB3FBC00C70589 /* JobViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobViewModel.swift; sourceTree = "<group>"; };
@@ -51,6 +55,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AEC9D3ED2BE8E423009BED3D /* SDWebImage in Frameworks */,
+				AEB669EF2BE7EDBD00205067 /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -103,21 +109,54 @@
 		AE85954A2BC475EA007D6187 /* JobHunt */ = {
 			isa = PBXGroup;
 			children = (
+				AEB669EC2BE7E7BA00205067 /* Service */,
+				AEB669EA2BE7E78700205067 /* Util */,
+				AEB669E72BE7E6FA00205067 /* Jobs */,
 				AE6861292BD995BD00211B94 /* Resources */,
-				AE5FE7ED2BD7B654007EFE3A /* Model */,
-				AE62832F2BD1A21600C2F91E /* jobs.json */,
-				AEFD023E2BCB3A1D00C70589 /* JobCell */,
 				AE85954B2BC475EA007D6187 /* AppDelegate.swift */,
 				AE85954D2BC475EA007D6187 /* SceneDelegate.swift */,
-				AE85954F2BC475EA007D6187 /* JobsVC.swift */,
 				AE68612C2BD9A3B400211B94 /* JobDetailsVC.swift */,
 				AE8595512BC475EA007D6187 /* Main.storyboard */,
-				AE6861272BD9920500211B94 /* CorneredView.swift */,
 				AE8595562BC475EB007D6187 /* LaunchScreen.storyboard */,
-				AE6283312BD27ACD00C2F91E /* JobsLoader.swift */,
 				AE8595592BC475EB007D6187 /* Info.plist */,
 			);
 			path = JobHunt;
+			sourceTree = "<group>";
+		};
+		AEB669E72BE7E6FA00205067 /* Jobs */ = {
+			isa = PBXGroup;
+			children = (
+				AE5FE7ED2BD7B654007EFE3A /* Model */,
+				AEFD023E2BCB3A1D00C70589 /* JobCell */,
+				AE85954F2BC475EA007D6187 /* JobsVC.swift */,
+				AEB669E82BE7E71100205067 /* JobsViewModel.swift */,
+			);
+			path = Jobs;
+			sourceTree = "<group>";
+		};
+		AEB669EA2BE7E78700205067 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				AEB669EB2BE7E79500205067 /* UIView */,
+			);
+			path = Util;
+			sourceTree = "<group>";
+		};
+		AEB669EB2BE7E79500205067 /* UIView */ = {
+			isa = PBXGroup;
+			children = (
+				AE6861272BD9920500211B94 /* CorneredView.swift */,
+			);
+			path = UIView;
+			sourceTree = "<group>";
+		};
+		AEB669EC2BE7E7BA00205067 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				AE6283312BD27ACD00C2F91E /* JobsLoader.swift */,
+				AEC9D3E92BE8DC4A009BED3D /* JobsRepository.swift */,
+			);
+			path = Service;
 			sourceTree = "<group>";
 		};
 		AEFD023E2BCB3A1D00C70589 /* JobCell */ = {
@@ -145,6 +184,10 @@
 			dependencies = (
 			);
 			name = JobHunt;
+			packageProductDependencies = (
+				AEB669EE2BE7EDBD00205067 /* Alamofire */,
+				AEC9D3EC2BE8E423009BED3D /* SDWebImage */,
+			);
 			productName = JobHunt;
 			productReference = AE8595482BC475EA007D6187 /* JobHunt.app */;
 			productType = "com.apple.product-type.application";
@@ -173,6 +216,10 @@
 				Base,
 			);
 			mainGroup = AE85953F2BC475EA007D6187;
+			packageReferences = (
+				AEB669ED2BE7EDBD00205067 /* XCRemoteSwiftPackageReference "Alamofire" */,
+				AEC9D3EB2BE8E423009BED3D /* XCRemoteSwiftPackageReference "SDWebImage" */,
+			);
 			productRefGroup = AE8595492BC475EA007D6187 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -192,7 +239,6 @@
 				AE8595532BC475EA007D6187 /* Base in Resources */,
 				AE7AA8762BD9A97A003801B3 /* Urbanist-Bold.ttf in Resources */,
 				AEFD02402BCB3A5900C70589 /* JobTableViewCell.xib in Resources */,
-				AE6283302BD1A21600C2F91E /* jobs.json in Resources */,
 				AE7AA8792BD9A97A003801B3 /* Urbanist-Regular.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -204,9 +250,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AEB669E92BE7E71100205067 /* JobsViewModel.swift in Sources */,
 				AE8595502BC475EA007D6187 /* JobsVC.swift in Sources */,
 				AE85954C2BC475EA007D6187 /* AppDelegate.swift in Sources */,
 				AE6861282BD9920500211B94 /* CorneredView.swift in Sources */,
+				AEC9D3EA2BE8DC4A009BED3D /* JobsRepository.swift in Sources */,
 				AE85954E2BC475EA007D6187 /* SceneDelegate.swift in Sources */,
 				AE68612D2BD9A3B400211B94 /* JobDetailsVC.swift in Sources */,
 				AEFD02422BCB3A7D00C70589 /* JobTableViewCell.swift in Sources */,
@@ -435,6 +483,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		AEB669ED2BE7EDBD00205067 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.9.1;
+			};
+		};
+		AEC9D3EB2BE8E423009BED3D /* XCRemoteSwiftPackageReference "SDWebImage" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImage.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.19.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		AEB669EE2BE7EDBD00205067 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = AEB669ED2BE7EDBD00205067 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+		AEC9D3EC2BE8E423009BED3D /* SDWebImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = AEC9D3EB2BE8E423009BED3D /* XCRemoteSwiftPackageReference "SDWebImage" */;
+			productName = SDWebImage;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = AE8595402BC475EA007D6187 /* Project object */;
 }

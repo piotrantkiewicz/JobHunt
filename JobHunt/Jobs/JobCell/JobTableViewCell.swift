@@ -1,4 +1,5 @@
 import UIKit
+import SDWebImage
 
 class JobTableViewCell: UITableViewCell {
     
@@ -23,7 +24,9 @@ class JobTableViewCell: UITableViewCell {
     func configure(
         viewModel: JobViewModel
     ) {
-        jobImageView.image = UIImage(named: viewModel.imageName)
+        jobImageView.sd_setImage(
+            with: URL(string: viewModel.imageUrl)
+        )
         companyLbl.text = viewModel.company
         positionLbl.text = viewModel.position
         
