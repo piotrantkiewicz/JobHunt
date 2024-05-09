@@ -25,7 +25,8 @@ class JobTableViewCell: UITableViewCell {
         viewModel: JobViewModel
     ) {
         jobImageView.sd_setImage(
-            with: URL(string: viewModel.imageUrl)
+            with: URL(string: viewModel.imageUrl),
+            placeholderImage: UIImage(named: "googleLogo")
         )
         companyLbl.text = viewModel.company
         positionLbl.text = viewModel.position
