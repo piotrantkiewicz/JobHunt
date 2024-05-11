@@ -25,11 +25,13 @@ class JobTableViewCell: UITableViewCell {
         viewModel: JobViewModel
     ) {
         jobImageView.sd_setImage(
-            with: URL(string: viewModel.imageUrl),
-            placeholderImage: UIImage(named: "googleLogo")
+            with: URL(string: viewModel.imageUrl)
         )
         companyLbl.text = viewModel.company
         positionLbl.text = viewModel.position
+        
+        companyLbl.font = UIFont.subheading
+        positionLbl.font = UIFont.heading
         
         self.layer.shadowColor = UIColor.black.cgColor
         self.layer.shadowOpacity = 0.05

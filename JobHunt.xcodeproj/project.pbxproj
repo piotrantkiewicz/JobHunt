@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		AE5FE7EC2BD7B643007EFE3A /* JobCategoryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE5FE7EB2BD7B643007EFE3A /* JobCategoryViewModel.swift */; };
 		AE6283322BD27ACD00C2F91E /* JobsLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE6283312BD27ACD00C2F91E /* JobsLoader.swift */; };
-		AE6861282BD9920500211B94 /* CorneredView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE6861272BD9920500211B94 /* CorneredView.swift */; };
 		AE68612D2BD9A3B400211B94 /* JobDetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE68612C2BD9A3B400211B94 /* JobDetailsVC.swift */; };
 		AE7AA8762BD9A97A003801B3 /* Urbanist-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AE7AA8702BD9A97A003801B3 /* Urbanist-Bold.ttf */; };
 		AE7AA8792BD9A97A003801B3 /* Urbanist-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AE7AA8732BD9A97A003801B3 /* Urbanist-Regular.ttf */; };
@@ -19,6 +18,7 @@
 		AE8595532BC475EA007D6187 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = AE8595522BC475EA007D6187 /* Base */; };
 		AE8595552BC475EB007D6187 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AE8595542BC475EB007D6187 /* Assets.xcassets */; };
 		AE8595582BC475EB007D6187 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = AE8595572BC475EB007D6187 /* Base */; };
+		AE93223B2BEE3AD3004CB1E7 /* DesignComponents in Frameworks */ = {isa = PBXBuildFile; productRef = AE93223A2BEE3AD3004CB1E7 /* DesignComponents */; };
 		AEB669E92BE7E71100205067 /* JobsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEB669E82BE7E71100205067 /* JobsViewModel.swift */; };
 		AEB669EF2BE7EDBD00205067 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = AEB669EE2BE7EDBD00205067 /* Alamofire */; };
 		AEC9D3EA2BE8DC4A009BED3D /* JobsRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEC9D3E92BE8DC4A009BED3D /* JobsRepository.swift */; };
@@ -31,7 +31,6 @@
 /* Begin PBXFileReference section */
 		AE5FE7EB2BD7B643007EFE3A /* JobCategoryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobCategoryViewModel.swift; sourceTree = "<group>"; };
 		AE6283312BD27ACD00C2F91E /* JobsLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobsLoader.swift; sourceTree = "<group>"; };
-		AE6861272BD9920500211B94 /* CorneredView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CorneredView.swift; sourceTree = "<group>"; };
 		AE68612C2BD9A3B400211B94 /* JobDetailsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobDetailsVC.swift; sourceTree = "<group>"; };
 		AE7AA8702BD9A97A003801B3 /* Urbanist-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Urbanist-Bold.ttf"; sourceTree = "<group>"; };
 		AE7AA8732BD9A97A003801B3 /* Urbanist-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Urbanist-Regular.ttf"; sourceTree = "<group>"; };
@@ -43,6 +42,7 @@
 		AE8595542BC475EB007D6187 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AE8595572BC475EB007D6187 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AE8595592BC475EB007D6187 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AE9322372BEE3876004CB1E7 /* DesignComponents */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = DesignComponents; sourceTree = "<group>"; };
 		AEB669E82BE7E71100205067 /* JobsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobsViewModel.swift; sourceTree = "<group>"; };
 		AEC9D3E92BE8DC4A009BED3D /* JobsRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobsRepository.swift; sourceTree = "<group>"; };
 		AEFD023F2BCB3A5900C70589 /* JobTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = JobTableViewCell.xib; sourceTree = "<group>"; };
@@ -57,6 +57,7 @@
 			files = (
 				AEC9D3ED2BE8E423009BED3D /* SDWebImage in Frameworks */,
 				AEB669EF2BE7EDBD00205067 /* Alamofire in Frameworks */,
+				AE93223B2BEE3AD3004CB1E7 /* DesignComponents in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -93,8 +94,10 @@
 		AE85953F2BC475EA007D6187 = {
 			isa = PBXGroup;
 			children = (
+				AE9322382BEE3876004CB1E7 /* Modules */,
 				AE85954A2BC475EA007D6187 /* JobHunt */,
 				AE8595492BC475EA007D6187 /* Products */,
+				AE9322392BEE3A00004CB1E7 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -110,7 +113,6 @@
 			isa = PBXGroup;
 			children = (
 				AEB669EC2BE7E7BA00205067 /* Service */,
-				AEB669EA2BE7E78700205067 /* Util */,
 				AEB669E72BE7E6FA00205067 /* Jobs */,
 				AE6861292BD995BD00211B94 /* Resources */,
 				AE85954B2BC475EA007D6187 /* AppDelegate.swift */,
@@ -123,6 +125,21 @@
 			path = JobHunt;
 			sourceTree = "<group>";
 		};
+		AE9322382BEE3876004CB1E7 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				AE9322372BEE3876004CB1E7 /* DesignComponents */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		AE9322392BEE3A00004CB1E7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		AEB669E72BE7E6FA00205067 /* Jobs */ = {
 			isa = PBXGroup;
 			children = (
@@ -132,22 +149,6 @@
 				AEB669E82BE7E71100205067 /* JobsViewModel.swift */,
 			);
 			path = Jobs;
-			sourceTree = "<group>";
-		};
-		AEB669EA2BE7E78700205067 /* Util */ = {
-			isa = PBXGroup;
-			children = (
-				AEB669EB2BE7E79500205067 /* UIView */,
-			);
-			path = Util;
-			sourceTree = "<group>";
-		};
-		AEB669EB2BE7E79500205067 /* UIView */ = {
-			isa = PBXGroup;
-			children = (
-				AE6861272BD9920500211B94 /* CorneredView.swift */,
-			);
-			path = UIView;
 			sourceTree = "<group>";
 		};
 		AEB669EC2BE7E7BA00205067 /* Service */ = {
@@ -187,6 +188,7 @@
 			packageProductDependencies = (
 				AEB669EE2BE7EDBD00205067 /* Alamofire */,
 				AEC9D3EC2BE8E423009BED3D /* SDWebImage */,
+				AE93223A2BEE3AD3004CB1E7 /* DesignComponents */,
 			);
 			productName = JobHunt;
 			productReference = AE8595482BC475EA007D6187 /* JobHunt.app */;
@@ -253,7 +255,6 @@
 				AEB669E92BE7E71100205067 /* JobsViewModel.swift in Sources */,
 				AE8595502BC475EA007D6187 /* JobsVC.swift in Sources */,
 				AE85954C2BC475EA007D6187 /* AppDelegate.swift in Sources */,
-				AE6861282BD9920500211B94 /* CorneredView.swift in Sources */,
 				AEC9D3EA2BE8DC4A009BED3D /* JobsRepository.swift in Sources */,
 				AE85954E2BC475EA007D6187 /* SceneDelegate.swift in Sources */,
 				AE68612D2BD9A3B400211B94 /* JobDetailsVC.swift in Sources */,
@@ -504,6 +505,10 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		AE93223A2BEE3AD3004CB1E7 /* DesignComponents */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = DesignComponents;
+		};
 		AEB669EE2BE7EDBD00205067 /* Alamofire */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = AEB669ED2BE7EDBD00205067 /* XCRemoteSwiftPackageReference "Alamofire" */;

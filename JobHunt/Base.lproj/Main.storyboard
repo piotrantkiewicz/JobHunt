@@ -69,6 +69,7 @@
                     <connections>
                         <outlet property="segmentedControl" destination="Vi2-Ae-Ge0" id="Al5-P5-DKf"/>
                         <outlet property="tableView" destination="MP7-29-JFi" id="g68-z9-MMz"/>
+                        <outlet property="titleLbl" destination="FOO-2e-rVu" id="aGf-aN-M27"/>
                         <segue destination="L4p-c6-vm7" kind="show" identifier="Details" id="KS4-nZ-3AE"/>
                     </connections>
                 </viewController>
@@ -105,7 +106,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hnC-AE-NY0" customClass="CorneredView" customModule="JobHunt" customModuleProvider="target">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hnC-AE-NY0" customClass="CorneredView" customModule="DesignComponents">
                                 <rect key="frame" x="20" y="291.66666666666669" width="353" height="70.333333333333314"/>
                                 <color key="backgroundColor" red="0.96470588239999999" green="0.96470588239999999" blue="0.96470588239999999" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
@@ -276,6 +277,14 @@
                     </view>
                     <navigationItem key="navigationItem" id="8LC-zv-4N8"/>
                     <connections>
+                        <outlet property="companyLbl" destination="SAh-9D-Ko5" id="hCn-09-xi4"/>
+                        <outlet property="companyLocationLbl" destination="R3h-0U-ebM" id="MHp-zg-fEd"/>
+                        <outlet property="experienceLbl" destination="ZV4-cI-RrN" id="FMB-kV-54D"/>
+                        <outlet property="experienceSubLbl" destination="Lzo-5Q-NJT" id="MRc-lh-pxY"/>
+                        <outlet property="localtionLbl" destination="qgS-7q-SVV" id="ef7-X3-i8P"/>
+                        <outlet property="locationSubLbl" destination="JMY-Bz-q4K" id="gaM-7p-znV"/>
+                        <outlet property="salaryLbl" destination="1cp-Mz-NCK" id="ebY-KQ-ofg"/>
+                        <outlet property="salarySubLbl" destination="Cg2-Z9-KCv" id="58k-We-TcF"/>
                         <outlet property="titleLbl" destination="gKX-9n-VZn" id="oi7-Jd-iSg"/>
                     </connections>
                 </viewController>

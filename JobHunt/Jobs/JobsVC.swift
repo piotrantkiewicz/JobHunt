@@ -2,6 +2,7 @@ import UIKit
 
 class JobsVC: UIViewController {
     
+    @IBOutlet weak var titleLbl: UILabel!
     @IBOutlet weak var segmentedControl: UISegmentedControl!
     @IBOutlet weak var tableView: UITableView!
     
@@ -14,6 +15,8 @@ class JobsVC: UIViewController {
 
         configureTableView()
         configureSegmentedControl()
+        
+        titleLbl.font = UIFont.title
     }
     
     func configureSegmentedControl() {
