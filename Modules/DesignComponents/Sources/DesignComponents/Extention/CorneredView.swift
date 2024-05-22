@@ -11,7 +11,7 @@ class CorneredView: UIView {
     }
     
     func commonInit() {
-        layer.cornerRadius = 12
+        layer.cornerRadius = 16
         layer.masksToBounds = true
     }
 }

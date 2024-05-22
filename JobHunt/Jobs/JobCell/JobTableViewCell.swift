@@ -3,6 +3,7 @@ import SDWebImage
 
 class JobTableViewCell: UITableViewCell {
     
+    @IBOutlet weak var jobCellBackgroundView: UIView!
     @IBOutlet weak var jobImageView: UIImageView!
     @IBOutlet weak var companyLbl: UILabel!
     @IBOutlet weak var positionLbl: UILabel!
@@ -33,14 +34,25 @@ class JobTableViewCell: UITableViewCell {
         companyLbl.font = UIFont.subheading
         positionLbl.font = UIFont.heading
         
-        self.layer.shadowColor = UIColor.black.cgColor
-        self.layer.shadowOpacity = 0.05
-        self.layer.shadowOffset = CGSize(width: 0, height: 10)
-        self.layer.shadowRadius = 20
-        self.layer.shadowPath = UIBezierPath(rect: self.bounds).cgPath
-        self.layer.shouldRasterize = true
-        self.layer.rasterizationScale = UIScreen.main.scale
+        jobCellBackgroundView.layer.shadowColor = UIColor.black.cgColor
+        jobCellBackgroundView.layer.shadowOpacity = 0.05
+        jobCellBackgroundView.layer.shadowOffset = CGSize(width: 0, height: 10)
+        jobCellBackgroundView.layer.shadowRadius = 20
+
+        let shadowPath = UIBezierPath()
+        let rect = jobCellBackgroundView.bounds
+        shadowPath.move(to: CGPoint(x: rect.minX, y: rect.maxY))
+        shadowPath.addLine(to: CGPoint(x: rect.maxX, y: rect.maxY))
+        shadowPath.addLine(to: CGPoint(x: rect.maxX, y: rect.maxY + 15))
+        shadowPath.addLine(to: CGPoint(x: rect.minX, y: rect.maxY + 15))
+        shadowPath.close()
+
+        jobCellBackgroundView.layer.shadowPath = shadowPath.cgPath
+        jobCellBackgroundView.layer.shouldRasterize = true
+        jobCellBackgroundView.layer.rasterizationScale = UIScreen.main.scale
+
+
         
-        self.layer.cornerRadius = 16
+        jobCellBackgroundView.layer.cornerRadius = 16
     }
 }
